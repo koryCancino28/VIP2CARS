@@ -1,0 +1,213 @@
+/* === Colores VIP2CARS Claro ===
+   Rojo Principal: #C00000
+   Rojo Claro: #FF4C4C
+   Blanco: #FFFFFF
+   Gris Claro: #F7F7F7
+   Gris Medio: #E0E0E0
+*/
+
+/* === Global === */
+body {
+    background-color: #F7F7F7 !important;
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.observaciones {
+    max-width: 100px; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+}
+/* === Contenedor General === */
+.container {
+    background-color: #FFFFFF !important;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 90vw;
+    margin: 30px auto;
+    box-sizing: border-box;
+    box-shadow: 0 0 12px rgba(192, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* === Títulos === */
+h1, h2, h3 {
+    text-align: center;
+    color: #C00000;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #C00000;
+    padding-bottom: 5px;
+}
+
+/* === Etiquetas === */
+label {
+    color: #C00000;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* === Inputs === */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    background-color: #FFF0F0;
+    color: #C00000;
+    border: 1px solid #C00000;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    transition: 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #FF4C4C;
+    background-color: #FFE5E5;
+}
+
+/* === Botones === */
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+}
+
+.btn_add,
+.btn-success {
+    background-color: #C00000 !important;
+    border: 1px solid #FF4C4C !important;
+    color: white;
+}
+
+.btn_add:hover,
+.btn-success:hover {
+    background-color: #A30000 !important;
+}
+
+.btn-secondary {
+    background-color: #FFCCCC !important;
+    color: #C00000 !important;
+    border: 1px solid #C00000 !important;
+}
+
+.btn-danger {
+    background-color: #FF4C4C !important;
+    border: 1px solid #C00000 !important;
+    color: white;
+}
+
+.btn_crear {
+    background-color: #FF4C4C !important;
+    border: 1px solid #C00000 !important;
+    color: white;
+}
+
+/* === Tablas === */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th {
+    background-color: #C00000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    white-space: nowrap;
+}
+
+.table td {
+    background-color: #FFF5F5;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    white-space: nowrap;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #FFE5E5;
+}
+
+/* === Formularios === */
+form {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.input_moderno {
+    background-color: #FFF0F0;
+    border: 1px solid #C00000;
+    color: #C00000;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(192, 0, 0, 0.3);
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    pointer-events: none;
+}
+
+/* === Alerts === */
+.alert-success {
+    background-color: #DFF5E1;
+    color: #065C2F;
+    border-left: 5px solid #28a745;
+}
+
+.alert-danger {
+    background-color: #FFE2E2;
+    color: #B30000;
+    border-left: 5px solid #C00000;
+}
+
+/* === Iconos === */
+.bi-arrow-right-circle {
+    font-size: 30px;
+    color: #C00000;
+}
+
+/* === Acciones === */
+.flex_acciones {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+        font-size: 14px;
+    }
+
+    .table th,
+    .table td {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
