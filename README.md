@@ -3,7 +3,7 @@ Sistema CRUD desarrollado en Laravel para gestionar vehículos y sus contactos, 
 
 Tecnologías utilizadas
 PHP 8.x
-Laravel 10.x 
+Laravel Framework 12.21.0
 Bootstrap 5 (para estilos y modales)
 FontAwesome
 MySQL (base de datos)
