@@ -30,6 +30,23 @@ class VehiculoController extends Controller
             'documento_cliente' => 'required',
             'correo_cliente' => 'required|email',
             'telefono_cliente' => 'required',
+        ], [
+            'placa.required' => 'La placa es obligatoria.',
+            'placa.unique' => 'La placa ya está registrada.',
+            'placa.max' => 'La placa no puede tener más de 10 caracteres.',
+            'marca.required' => 'La marca es obligatoria.',
+            'modelo.required' => 'El modelo es obligatorio.',
+            'año_fabricacion.required' => 'El año de fabricación es obligatorio.',
+            'año_fabricacion.digits' => 'El año de fabricación debe tener 4 dígitos.',
+            'año_fabricacion.integer' => 'El año de fabricación debe ser un número entero.',
+            'año_fabricacion.min' => 'El año de fabricación no puede ser anterior a 1900.',
+            'año_fabricacion.max' => 'El año de fabricación no puede ser mayor al año actual.',
+            'nombre_cliente.required' => 'El nombre del cliente es obligatorio.',
+            'apellidos_cliente.required' => 'Los apellidos del cliente son obligatorios.',
+            'documento_cliente.required' => 'El documento del cliente es obligatorio.',
+            'correo_cliente.required' => 'El correo electrónico del cliente es obligatorio.',
+            'correo_cliente.email' => 'El correo electrónico debe ser válido.',
+            'telefono_cliente.required' => 'El teléfono del cliente es obligatorio.',
         ]);
 
         Vehiculo::create($request->all());
@@ -59,7 +76,25 @@ class VehiculoController extends Controller
             'documento_cliente' => 'required',
             'correo_cliente' => 'required|email',
             'telefono_cliente' => 'required',
-        ]);
+        ],
+    [
+        'placa.required' => 'La placa es obligatoria.',
+        'placa.unique' => 'La placa ya está registrada.',
+        'placa.max' => 'La placa no puede tener más de 10 caracteres.',
+        'marca.required' => 'La marca es obligatoria.',
+        'modelo.required' => 'El modelo es obligatorio.',
+        'año_fabricacion.required' => 'El año de fabricación es obligatorio.',
+        'año_fabricacion.digits' => 'El año de fabricación debe tener 4 dígitos.',
+        'año_fabricacion.integer' => 'El año de fabricación debe ser un número entero.',
+        'año_fabricacion.min' => 'El año de fabricación no puede ser anterior a 1900.',
+        'año_fabricacion.max' => 'El año de fabricación no puede ser mayor al año actual.',
+        'nombre_cliente.required' => 'El nombre del cliente es obligatorio.',
+        'apellidos_cliente.required' => 'Los apellidos del cliente son obligatorios.',
+        'documento_cliente.required' => 'El documento del cliente es obligatorio.',
+        'correo_cliente.required' => 'El correo electrónico del cliente es obligatorio.',
+        'correo_cliente.email' => 'El correo electrónico debe ser válido.',
+        'telefono_cliente.required' => 'El teléfono del cliente es obligatorio.',
+    ]);
 
         $vehiculo->update($request->all());
 

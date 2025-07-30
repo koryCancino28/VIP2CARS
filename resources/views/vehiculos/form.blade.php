@@ -12,7 +12,7 @@
 </div>
 <div class="mb-3">
     <label>Año de Fabricación:</label>
-    <input  type="number" name="anio_fabricacion"  class="form-control" value="{{ old('anio_fabricacion', $vehiculo->anio_fabricacion ?? '') }}"
+    <input  type="number" name="año_fabricacion"  class="form-control" value="{{ old('anio_fabricacion', $vehiculo->anio_fabricacion ?? '') }}"
     min="1900" max="{{ date('Y') }}" maxlength="4" placeholder="Ingrese el año de fabricación"/>
 </div>
 <div class="mb-3">
