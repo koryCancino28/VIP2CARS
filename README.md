@@ -1,4 +1,4 @@
-REALIZADO POR KORY CANCINO ARIAS
+REALIZADO POR KORY OSMARA N. CANCINO ARIAS
 --------------------------------------
 VIP2CARS - Sistema CRUD de Vehículos
 Sistema CRUD desarrollado en Laravel para gestionar vehículos y sus contactos, diseñado para la empresa automotriz VIP2CARS. Permite crear, leer, actualizar y eliminar registros de vehículos junto con los datos de sus clientes.
