@@ -20,9 +20,9 @@
             @foreach($vehiculos as $vehiculo)
             <tr>
                 <td>{{ $vehiculo->placa }}</td>
-                <td>{{ $vehiculo->marca }}</td>
+                <td class="observaciones">{{ $vehiculo->marca }}</td>
                 <td>{{ $vehiculo->modelo }}</td>
-                <td class="observaciones">{{ $vehiculo->nombre_cliente }} {{ $vehiculo->apellidos_cliente }}</td>
+                <td class="observaciones">{{ $vehiculo->contacto->nombre }} {{ $vehiculo->contacto->apellido }}</td>
                 <td>
                     <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#modalVehiculo{{ $vehiculo->id }}"><i class="fas fa-eye mr-2"></i> Ver </button> @include('vehiculos.show', ['vehiculo' => $vehiculo])
                     <a href="{{ route('vehiculos.edit', $vehiculo) }}" class="btn btn-sm btn-warning"><i class="fas fa-edit mr-2"></i> Editar</a>

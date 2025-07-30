@@ -28,29 +28,29 @@
                     <p style="word-break: break-word; white-space: normal;">
                         <strong style="color: #C00000;">
                         <i class="fas fa-calendar-alt"></i> Año de fabricación:
-                        </strong> {{ $vehiculo->anio_fabricacion }}
+                        </strong> {{ $vehiculo->año_fabricacion }}
                     </p>
                     </div>
                     <div class="col-md-6 col-12">
                     <p style="word-break: break-word; white-space: normal;">
                         <strong style="color: #C00000;">
                         <i class="fas fa-user"></i> Cliente:
-                        </strong> {{ $vehiculo->nombre_cliente }} {{ $vehiculo->apellidos_cliente }}
+                        </strong> {{ $vehiculo->contacto->nombre }} {{ $vehiculo->contacto->apellido }}
                     </p>
                     <p style="word-break: break-word; white-space: normal;">
                         <strong style="color: #C00000;">
                         <i class="fas fa-file-alt"></i> Documento:
-                        </strong> {{ $vehiculo->documento_cliente }}
+                        </strong> {{ $vehiculo->contacto->DNI }}
                     </p>
                     <p style="word-break: break-word; white-space: normal;">
                         <strong style="color: #C00000;">
                         <i class="fas fa-envelope"></i> Correo:
-                        </strong> {{ $vehiculo->correo_cliente }}
+                        </strong> {{ $vehiculo->contacto->email }}
                     </p>
                     <p style="word-break: break-word; white-space: normal;">
                         <strong style="color: #C00000;">
                         <i class="fas fa-phone"></i> Teléfono:
-                        </strong> {{ $vehiculo->telefono_cliente }}
+                        </strong> {{ $vehiculo->contacto->telefono }}
                     </p>
                     </div>
                 </div>
