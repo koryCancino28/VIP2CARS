@@ -73,3 +73,6 @@ php artisan migrate
 ******IMPORTANTE
 Si sale No application encryption key has been specified.
 correr el siguiente comando php artisan key:generate
+
+Modelado BBDD para encuestas anónimas
+https://docs.google.com/document/d/1eodlP19I7nnCb0imETVAzABpn7oSbks_kabe1KU53kg/edit?usp=sharing
