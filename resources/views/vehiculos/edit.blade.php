@@ -7,8 +7,10 @@
     <form method="POST" action="{{ route('vehiculos.update', $vehiculo) }}">
         @csrf @method('PUT')
         @include('vehiculos.form', ['vehiculo' => $vehiculo])
-        <button type="submit" class="btn btn-primary"><i class="fas fa-sync-alt"></i> Actualizar</button>
-        <a href="{{ route('vehiculos.index') }}" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Cancelar</a>
+        <div class="w">
+            <button type="submit" class="btn btn-success"><i class="fas fa-sync-alt"></i> Actualizar</button>
+            <a href="{{ route('vehiculos.index') }}" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Cancelar</a>
+        </div>
     </form>
 </div>
 @endsection

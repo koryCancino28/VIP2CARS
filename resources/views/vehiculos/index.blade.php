@@ -5,8 +5,7 @@
     <h1><i class="fas fa-car-side"></i> Vehículos Registrados</h1>
     <a href="{{ route('vehiculos.create') }}" class="btn btn-primary mb-3"><i class="fas fa-plus mr-2"></i> Registrar Vehículo</a>
     @include('messages')
-
-    <table class="table table-bordered">
+    <table class="table table-bordered" id="tabla_vehiculos">
         <thead>
             <tr>
                 <th>Placa</th>
@@ -41,29 +40,46 @@
     </table>
 </div>
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const forms = document.querySelectorAll('.form-eliminar');
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabla = $('#tabla_vehiculos').DataTable({
+            language: {
+                url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json'
+            },
+            pageLength: 10,
+            lengthChange: false, 
+            info: false,         
+            responsive: true,
+            autoWidth: false,
+            ordering: true,
+            columnDefs: [
+                { targets: -1, orderable: false } 
+            ],
+            dom: '<"original-search"f>rt<"d-flex justify-content-end mt-3"p>'
+        });
+        $('#buscador-wrapper').html($('.original-search').html());
+        $('.original-search').remove(); 
+        const forms = document.querySelectorAll('.form-eliminar');
 
-    forms.forEach(form => {
-        form.addEventListener('submit', function (e) {
-            e.preventDefault(); 
-            Swal.fire({
-                title: '¿Estás seguro?',
-                text: "¡Esta acción no se puede deshacer!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#d33',
-                cancelButtonColor: '#6c757d',
-                confirmButtonText: 'Sí, eliminar',
-                cancelButtonText: 'Cancelar'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    form.submit(); 
-                }
+        forms.forEach(form => {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault(); 
+                Swal.fire({
+                    title: '¿Estás seguro?',
+                    text: "¡Esta acción no se puede deshacer!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#d33',
+                    cancelButtonColor: '#6c757d',
+                    confirmButtonText: 'Sí, eliminar',
+                    cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        form.submit(); 
+                    }
+                });
             });
         });
     });
-});
 </script>
 
 @endsection
