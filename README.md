@@ -13,15 +13,27 @@ MySQL (base de datos)
 Características
 Registro y gestión de vehículos: placa, marca, modelo, año de fabricación.
 
-Registro de datos del cliente: nombre, apellidos, documento, correo y teléfono.
+Asociación con cliente: nombre, apellidos, documento de identidad, correo y teléfono.
 
-Validación robusta para campos (ej. año de fabricación entre 1900 y el año actual).
+Validaciones inteligentes: campos protegidos con reglas, por ejemplo:
 
-Interfaz responsiva y moderna con colores corporativos VIP2CARS (rojo, negro, blanco).
+Año de fabricación entre 1900 y el actual.
 
-Modal para visualización rápida de detalles sin salir de la lista.
+Solo números en teléfono y documento.
 
-Estilos sofisticados y claros.
+Interfaz responsive: optimizada para dispositivos móviles, basada en Bootstrap 5.
+
+Estilos corporativos VIP2CARS: Rojo, blanco y gris claro, con un diseño moderno y limpio.
+
+Modal de detalles: ver información del vehículo sin salir de la tabla.
+
+DataTables: tabla interactiva con búsqueda, ordenamiento y paginación fluida.
+
+SweetAlert: confirmaciones y alertas personalizadas para mejor experiencia de usuario.
+
+Mensajes visuales de éxito/error con diseño unificado.
+
+Seguridad en formularios con tokens CSRF y validaciones backend.
 
 Requisitos previos
 PHP >= 8.0

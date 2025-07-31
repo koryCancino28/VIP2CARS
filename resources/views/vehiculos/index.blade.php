@@ -26,13 +26,12 @@
                     <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#modalVehiculo{{ $vehiculo->id }}"><i class="fas fa-eye mr-2"></i> Ver </button> @include('vehiculos.show', ['vehiculo' => $vehiculo])
                     <a href="{{ route('vehiculos.edit', $vehiculo) }}" class="btn btn-sm btn-warning"><i class="fas fa-edit mr-2"></i> Editar</a>
                     <form action="{{ route('vehiculos.destroy', $vehiculo) }}" method="POST" class="form-eliminar" style="display:inline;">
-    @csrf
-    @method('DELETE')
-    <button type="submit" class="btn btn-sm btn-danger btn-eliminar">
-        <i class="fas fa-trash mr-2"></i> Eliminar
-    </button>
-</form>
-
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-sm btn-danger btn-eliminar">
+                            <i class="fas fa-trash mr-2"></i> Eliminar
+                        </button>
+                    </form>                             
                 </td>
             </tr>
             @endforeach
