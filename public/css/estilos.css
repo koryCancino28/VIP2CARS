@@ -268,3 +268,8 @@ form {
     color: #C00000;
     border-radius: 6px;
 }
+/* Centrar texto en los encabezados de la tabla */
+#tabla_vehiculos thead th {
+    text-align: center;
+    vertical-align: middle;
+}
