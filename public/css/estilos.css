@@ -13,6 +13,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 .observaciones {
     max-width: 100px; 
@@ -54,6 +55,7 @@ label {
 
 /* === Inputs === */
 input[type="text"],
+input[type="tel"],
 input[type="email"],
 input[type="number"],
 select {
@@ -210,4 +212,36 @@ form {
         font-size: 14px;
         padding: 6px;
     }
+}
+/* === SweetAlert ajustes === */
+.swal2-popup {
+    border-radius: 12px !important;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.swal2-title {
+    color: #C00000 !important;
+    font-weight: bold;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 10px !important;
+}
+
+.swal2-confirm.btn,
+.swal2-cancel.btn {
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    font-size: 14px;
+}
+
+.swal2-confirm.btn-danger {
+    background-color: #FF4C4C;
+    color: #FFFFFF;
+}
+
+.swal2-cancel.btn-secondary {
+    background-color: #E0E0E0;
+    color: #333;
 }

@@ -46,7 +46,7 @@ Configura la conexión a base de datos en .env:
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=vip2cars_db
+DB_DATABASE=vip2cars_crud
 DB_USERNAME=tu_usuario
 DB_PASSWORD=tu_password
 Generar clave de aplicación
@@ -56,3 +56,8 @@ Migrar la base de datos
 
 correr el proyecto
 php artisan migrate
+
+
+******IMPORTANTE
+Si sale No application encryption key has been specified.
+correr el siguiente comando php artisan key:generate
